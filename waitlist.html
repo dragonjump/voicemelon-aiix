@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Voice Melon- AIIX</title>
+
+  <link rel="stylesheet" type="text/css" href="./precheck.css">
+
+</head>
+
+
+<body>
+
+  <script>
+    let submitted = false;
+    function toggleContainer() {
+      document.getElementById('passwordContainer').classList.add('hidden')
+      document.getElementById('waitlistContainer').classList.remove('hidden')
+    }
+    function doRedirect() {
+      const username = document.getElementById('username').value
+      window.location = "received.html?username=" + username
+    }
+
+    /**
+     * Validates the waitlist form by checking if the user has entered their name and a valid email address.
+     * If validation fails, an alert box is shown with an appropriate message.
+     * @return {boolean} true if the form is valid, false otherwise
+     */
+    function validateForm() {
+      const name = document.getElementById("username").value;
+      const email = document.getElementById("email").value;
+
+      if (name == "") {
+        alert("Please enter your name");
+        return false;
+      }
+
+      var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      if (!emailRegex.test(email)) {
+        alert("Please enter a valid email address");
+        return false;
+      }
+
+      submitted = true
+      return true;
+
+
+    }
+  </script>
+
+
+  <!-- A simple cincai static html , nothing here can ciow -->
+
+
+  <iframe id=hidden_iframe name=hidden_iframe onload='submitted&&(doRedirect())' style=display:none></iframe>
+
+  <div id="waitlistContainer" class="  waitlist">
+    <h1> Join our waitlist (AI IX)</h1>
+
+    <p>We're currently managing a waitlist to ensure a smooth and high-quality experience for all users. This allows us
+      to gradually onboard new members and provide the best possible service. We'll send you an email update with access
+      credentials once you're selected.</p>
+
+    <!-- <h6>For General Users:</h6> -->
+    <p> <br /> Join the VoiceMelon waitlist to chat with lifelike avatars, including virtual friends and family. Enjoy
+      engaging conversations with both voice and image. Sign up now to be part of this innovative platform! </p>
+
+    <h6 class="hidden">What is voicemelon? </h6>
+    <p class="hidden"> Voicemelon is a voice technology company that specializes in creating interactive voice
+      experiences for brands and businesses. They focus on developing voice applications for smart speakers, voice
+      assistants, and other voice-enabled devices. Voicemelon's services typically include:
+
+      Voice App Development: Creating custom voice applications (also known as "skills" or "actions") for platforms like
+      Amazon Alexa, Google Assistant, and Apple Siri.
+      Voice UX Design: Designing user-friendly voice interfaces to ensure a seamless and engaging experience for users.
+      Content Creation: Producing high-quality content tailored for voice interactions, such as audio stories, games,
+      and educational content.
+      Integration Services: Integrating voice capabilities into existing digital ecosystems, such as websites, mobile
+      apps, and CRM systems.
+      Analytics and Optimization: Providing tools and insights to track the performance of voice applications and
+      optimize them for better user engagement.
+    </p>
+
+
+    <h6 class="hidden">For Engineers & Developers </h6>
+    <p class="hidden"> Join the VoiceMelon waitlist and access our source code for your AI projects. Unlock faster
+      agentic ai development with our platform engineering solutions, cutting release times by up to 3x</p>
+    <div>
+      <form class="form" method=post onsubmit="return validateForm()" target=hidden_iframe
+        action="https://docs.google.com/forms/d/e/1FAIpQLSe0uJ0LoxmnkvDP60E8AujzWCI1s_61Hv9110mzC4lwNA_0rw/formResponse">
+
+        <p>
+        <h2>Name
+        </h2>
+        <input id="username" type="text" name="entry.2130509111" value="" />
+        </p>
+        <p>
+        <h2>Email
+        </h2>
+        <input id="email" type="text" name="entry.51541838" value="">
+        </p>
+
+
+        <input type="submit" value="Join Waitlist" />
+      </form>
+      <p><br /><br /> <br /></p>
+    </div>
+  </div>
+
+  <div id="backgroundSplashContainer" class="background-splash" style=" 
+  position: fixed;
+    z-index: -1;
+    margin: 0 auto;
+    top: 34vh; opacity: .3;
+    text-align: center; 
+    transform: translateX(-50%);
+    left: 50%;" class="logo-fixed">
+    <img src="./vite.svg" style=" max-width: 140px;  " />
+    <h4> Voice Melon</h4>
+  </div>
+  <script>
+    // onload
+    document.getElementById('passwordContainer').classList.add('hidden')
+    setTimeout(() => {
+      document.getElementById('passwordContainer').classList.remove('hidden')
+      document.getElementById('backgroundSplashContainer').classList.add('lowopacity')
+    }, 1450);
+  </script>
+</body>
+
+</html>
