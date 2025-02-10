@@ -118,7 +118,11 @@
     margin-left:13.5px
  }
 
- 
+ .humanoid{
+    box-shadow: inset -1px -4px 20px 8px #e2f1f9;
+    border-radius: 60%;
+    max-width: 300px;
+ }
 /* Hide the horizontal scrollbar */
 ::-webkit-scrollbar:horizontal {
     height: 0px;
