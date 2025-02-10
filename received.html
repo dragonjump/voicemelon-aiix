@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Virtual Melon</title>
+
+  <link rel="stylesheet" type="text/css" href="precheck.css">
+
+</head>
+
+
+<body class="received xlarge">
+  <h1> Success 🎉</h1>
+  <h2>
+    Hi <span id="username">friend</span>,</h2>
+  <div class="leftindent">
+    <p>
+
+
+      Thank you for signing up and joining our waitlist ! We're thrilled to have you on board and appreciate your
+      interest
+      in our services. 🤩
+    </p>
+    <p>
+      We have received your email and the reason
+      for your waitlist request. ✅
+      <br /> <br /> Our team is currently reviewing all
+      submissions, and we will send you an email
+      update with access credentials once you are selected.
+
+    </p>
+    <p>
+      In the meantime, if you have any questions
+      or need further assistance,
+      feel free to reach out to us.
+      <br />hello@aidances.com
+
+    </p>
+  </div>
+  <h2>
+    Best regards,<br />
+    Sean
+  </h2>
+
+  <div id="backgroundSplashContainer" class="background-splash" style=" 
+  position: fixed;
+  opacity: .11;
+    z-index: -1;
+    margin: 0 auto;
+    top: 34vh;
+    text-align: center; 
+    transform: translateX(-50%);
+    left: 50%;" class="logo-fixed">
+    <img src="vite.svg" style=" max-width: 140px;  " />
+    <h4> Voice Melon</h4>
+  </div>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const username = urlParams.get('username');
+    if (username) {
+      document.getElementById('username').textContent = username;
+    }
+  </script>
+  </script>
+</body>
+
+</html>
