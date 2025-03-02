@@ -16,6 +16,9 @@
      color: #fff !important;
  
  }
+ .hidden{
+     display: none;
+ }
 
  textarea,
  input[type="text"],
